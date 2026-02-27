@@ -40,7 +40,8 @@ The client faced significant challenges in manually monitoring Minimum Advertise
 
 ## Data Pipeline Workflow
 
-<img width="1536" height="1024" alt="MAP Compliance Data Pipeline stages" src="https://github.com/user-attachments/assets/cc332c41-960e-4bdc-b797-543e0ca609f8" />
+<img width="1536" height="539" alt="MAP Compliance Data Pipeline stages" src="https://github.com/user-attachments/assets/6bcc114e-61f0-4205-9e10-7fda84499cb7" />
+
 
 
 -------------------
