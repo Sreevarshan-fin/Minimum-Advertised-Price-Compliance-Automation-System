@@ -38,9 +38,7 @@ If Smart Place Store lists SKU GT53XL at $90 (< LPP $95), the system maps it to 
 ## Project Architecture
 
 
-
-
-
+![Credit Risk Flow](https://raw.githubusercontent.com/Sreevarshan-fin/Sreevarshan-fin/main/assets/mapproject.svg)
 
 
 ## Data Pipeline Workflow
