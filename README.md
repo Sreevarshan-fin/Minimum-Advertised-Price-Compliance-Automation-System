@@ -57,17 +57,18 @@ Python • Pandas • MySQL • SQLAlchemy • ReportLab • Logging
 
 ---
 
+
+
 ##  Business Impact
 
-- Significantly reduced manual monitoring effort through automation
-
-- Improved reliability of violation detection using rule-based validation
-
-- Ensured safe pipeline re-runs with incremental processing design
-
-- Accelerated enforcement workflow via automated letter generation
-
-- Built scalable foundation for enterprise MAP compliance monitoring
+* Enabled automated monitoring and enforcement of MAP compliance across marketplaces
+* Strengthened brand price integrity and reduced risk of market price erosion
+* Created a level playing field for authorized resellers
+* Improved visibility into reseller pricing behavior
+* Accelerated detection and response to pricing violations
+* Enhanced customer trust through consistent market pricing
+* Provided a scalable foundation for proactive compliance management
 
 ---
+
 
