@@ -50,7 +50,7 @@ If Smart Place Store lists SKU GT53XL at $90 (< LPP $95), the system maps it to 
 
 -------------------
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 Python • Pandas • MySQL • SQLAlchemy • ReportLab • Logging
 
