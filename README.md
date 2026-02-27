@@ -45,7 +45,8 @@ If Smart Place Store lists SKU GT53XL at $90 (< LPP $95), the system maps it to 
 
 ## Data Pipeline Workflow
 
-<img width="1536" height="539" alt="MAP Compliance Data Pipeline stages" src="https://github.com/user-attachments/assets/6bcc114e-61f0-4205-9e10-7fda84499cb7" />
+
+![Credit Risk Flow](https://raw.githubusercontent.com/Sreevarshan-fin/Sreevarshan-fin/main/assets/map_pipeline.svg)
 
 
 
