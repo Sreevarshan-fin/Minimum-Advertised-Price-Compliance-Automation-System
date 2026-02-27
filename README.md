@@ -17,6 +17,11 @@ The client faced significant challenges in manually monitoring Minimum Advertise
 * Ensured safe re-runs using **processed flags and batch tracking**
 * Automated violation communication via **PDF letter generation**
 
+
+**Example**
+
+If Smart Place Store lists SKU GT53XL at $90 (< LPP $95), the system maps it to 7-Eleven, sends a warning, and escalates on repeat violations.
+
 ---
 
 ## ⚙️ Solution
