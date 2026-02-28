@@ -70,7 +70,7 @@ Hierarchical grouping of products into categories and subcategories for enforcem
 ---
 
 
-## Project Architecture
+##  ⚙️ Project Architecture
 
 
 ![Credit Risk Flow](https://raw.githubusercontent.com/Sreevarshan-fin/Sreevarshan-fin/main/assets/mapproject.svg)
