@@ -69,7 +69,26 @@ The system uses **fuzzy matching and lookup mapping** to consolidate aliases int
 
 ## ⚙️ System Workflow
 
-![Credit Risk Flow](https://raw.githubusercontent.com/Sreevarshan-fin/Sreevarshan-fin/main/assets/mappipeline.svg)
+CSV / Excel
+   ↓
+Data Ingestion
+(scan, deduplicate)
+   ↓
+Seller Identity Resolution
+(fuzzy alias mapping)
+   ↓
+Compliance Database (MySQL)
+(products / sellers / listings)
+   ↓
+MAP Compliance Engine
+(SAP vs LPP violation detection)
+   ↓
+Violation Table
+   ↓
+Enforcement Engine
+(rule-based action)
+   ↓
+PDF Warning Generator
 
 
 ### 1️. Price Monitoring
