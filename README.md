@@ -72,25 +72,25 @@ The system uses **fuzzy matching and lookup mapping** to consolidate aliases int
 ![Credit Risk Flow](https://raw.githubusercontent.com/Sreevarshan-fin/Sreevarshan-fin/main/assets/mappipeline.svg)
 
 
-### 1️⃣ Price Monitoring
+### 1️. Price Monitoring
 
 * Ingest marketplace price data
 * Compare SAP vs LPP
 * Flag potential violations
 
-### 2️⃣ Seller Identity Mapping
+### 2️. Seller Identity Mapping
 
 * Apply fuzzy/partial matching
 * Map marketplace seller names to master reseller
 * Consolidate violation counts
 
-### 3️⃣ Automated Enforcement
+### 3️. Automated Enforcement
 
 * First violations → Warning letters
 * Repeated violations → Category suspension
 * Maintain violation history
 
-### 4️⃣ Reporting & Insights
+### 4️. Reporting & Insights
 
 * Violation dashboards
 * Seller risk tracking
@@ -98,7 +98,7 @@ The system uses **fuzzy matching and lookup mapping** to consolidate aliases int
 
 ---
 
-## 🧪 Example Scenario
+## Example Scenario
 
 **Reseller:** 7-Eleven
 **Alias:** Smart Place Store
@@ -110,7 +110,7 @@ The system uses **fuzzy matching and lookup mapping** to consolidate aliases int
 | LPP              | $95   |
 | Advertised Price | $90   |
 
-### 🔍 What Happens
+###  What Happens
 
 1. System detects SAP ($90) < LPP ($95)
 2. Fuzzy mapping links *Smart Place Store* → *7-Eleven*
@@ -131,7 +131,7 @@ Improved pricing policy enforcement and audit traceability across reseller ecosy
 
 ---
 
-## 🛠️ Tech Stack (Customize if needed)
+## Tech Stack  
 
 * **Python** — Data processing & automation
 * **SQL (MySQL)** — Data storage & monitoring logic
@@ -141,7 +141,7 @@ Improved pricing policy enforcement and audit traceability across reseller ecosy
 
 ---
 
-## 🚀 Future Enhancements
+## Future Enhancements
 
 * Real-time price scraping
 * ML-based seller identity resolution
