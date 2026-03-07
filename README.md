@@ -1,24 +1,25 @@
-# Minimum-Advertised-Price-Compliance-Automation-System
 
+# Minimum Advertised Price (MAP) Compliance Automation System
 
 ## Project Overview
 
-This project implements an automated **MAP (Minimum Advertised Price) compliance monitoring system** that tracks reseller pricing across marketplaces and enforces pricing policies.
+This project implements an **automated MAP (Minimum Advertised Price) compliance monitoring system** that tracks reseller pricing across multiple marketplaces and enforces pricing policies.
 
-The system monitors **150K+ product listings from 901 sellers across 5 marketplaces**, detects MAP/LPP violations, resolves reseller identities, and automatically triggers enforcement actions such as warning notifications and category suspension.
+The system monitors **150K+ product listings from 901 sellers across 5 marketplaces**, detects **MAP/LPP violations**, resolves reseller identities, and automatically triggers enforcement actions such as **warning notifications and category suspension**.
 
-The goal is to help brands maintain **price integrity, prevent price erosion, and enforce fair reseller competition**.
+The goal is to help brands **maintain price integrity, prevent price erosion, and ensure fair reseller competition**.
 
 ---
 
 # Business Problem
 
-Brands enforce **Minimum Advertised Price (MAP)** policies to protect product value.
-However, monitoring reseller compliance across multiple marketplaces is difficult due to:
+Brands enforce **Minimum Advertised Price (MAP)** policies to protect product value and maintain consistent pricing across resellers.
 
-* Large number of product listings
-* Sellers using **different storefront aliases**
-* Constant price updates
+However, monitoring reseller compliance across multiple marketplaces is challenging due to:
+
+* Large volume of product listings
+* Sellers operating under multiple storefront aliases
+* Frequent price updates
 * Manual monitoring limitations
 
 Without automated monitoring, brands risk:
@@ -54,20 +55,21 @@ The price at which a reseller lists a product on a marketplace.
 Resellers may operate under multiple storefront names across marketplaces.
 The system uses **fuzzy matching and lookup mapping** to consolidate aliases into a single seller identity.
 
-
-
 ---
-
 
 ##  Project Architecture
 
 
 ![Credit Risk Flow](https://raw.githubusercontent.com/Sreevarshan-fin/Sreevarshan-fin/main/assets/mapproject.svg)
 
---------
 
 
-## ⚙️ System Workflow
+
+# System Architecture
+
+The MAP compliance system automates pricing monitoring, violation detection, and enforcement across marketplaces.
+
+### System Workflow
 
 ```
 CSV / Excel
@@ -87,38 +89,42 @@ MAP Compliance Engine
 Violation Table
    ↓
 Enforcement Engine
-(rule-based action)
+(rule-based actions)
    ↓
 PDF Warning Generator
 ```
 
-### 1️. Price Monitoring
+---
 
-* Ingest marketplace price data
-* Compare SAP vs LPP
-* Flag potential violations
+# Workflow Components
 
-### 2️. Seller Identity Mapping
+### 1. Price Monitoring
 
-* Apply fuzzy/partial matching
-* Map marketplace seller names to master reseller
-* Consolidate violation counts
+* Ingest marketplace price listings
+* Compare **SAP vs LPP** thresholds
+* Detect potential MAP violations
 
-### 3️. Automated Enforcement
+### 2. Seller Identity Mapping
 
-* First violations → Warning letters
+* Apply **fuzzy/partial matching**
+* Map seller aliases to master reseller identity
+* Consolidate violations across marketplaces
+
+### 3. Automated Enforcement
+
+* First violation → Warning notification
 * Repeated violations → Category suspension
-* Maintain violation history
+* Maintain violation history for audit tracking
 
-### 4️. Reporting & Insights
+### 4. Reporting & Insights
 
 * Violation dashboards
-* Seller risk tracking
-* Compliance summaries
+* Seller compliance tracking
+* Marketplace compliance summaries
 
 ---
 
-## Example Scenario
+# Example Scenario
 
 **Reseller:** 7-Eleven
 **Alias:** Smart Place Store
@@ -130,46 +136,43 @@ PDF Warning Generator
 | LPP              | $95   |
 | Advertised Price | $90   |
 
-###  What Happens
+### System Response
 
-1. System detects SAP ($90) < LPP ($95)
-2. Fuzzy mapping links *Smart Place Store* → *7-Eleven*
-3. Warning letter automatically generated
-4. Continued violations → Category suspension
-
----
-
-
-**Business Impact**
-
-* Monitored **150K+ listings from 901 sellers across 5 marketplaces**, enabling scalable MAP compliance monitoring.
-* Reduced **duplicate seller identities by ~25%** through seller entity resolution.
-* Decreased **manual compliance review time by ~40%** via automated violation detection and reporting.
-* Enabled **reliable cross-marketplace pricing enforcement with full audit traceability**.
+1. System detects **SAP ($90) < LPP ($95)**
+2. Fuzzy matching maps **Smart Place Store → 7-Eleven**
+3. Violation recorded in compliance database
+4. **Warning notification automatically generated**
+5. Repeated violations trigger **category suspension**
 
 ---
 
-## Tech Stack  
+# Business Impact
 
-* **Python** — Data processing & automation
-* **SQL (MySQL)** — Data storage & monitoring logic
-* **Pandas / NumPy** — Data cleaning & analysis
-* **Fuzzy Matching** — Reseller mapping
-* **ReportLab** — Automated warning letters
+* Monitored **150K+ product listings** from **901 sellers across 5 marketplaces**
+* Enabled scalable **cross-marketplace MAP compliance monitoring**
+* Reduced duplicate seller identities by **~25%** through seller entity resolution
+* Decreased manual compliance review time by **~40%** through automated violation detection
+* Improved pricing policy enforcement with **full audit traceability**
 
 ---
 
-## Future Enhancements
+# Tech Stack
 
-* Real-time price scraping
+* **Python** — Data processing and automation
+* **SQL (MySQL)** — Compliance data storage and monitoring logic
+* **Pandas / NumPy** — Data cleaning and transformation
+* **Fuzzy Matching** — Seller identity resolution
+* **ReportLab** — Automated warning letter generation
+
+---
+
+# Future Enhancements
+
+* Real-time marketplace price scraping
 * ML-based seller identity resolution
 * Automated email notification system
-* Risk scoring for resellers
+* Seller risk scoring model
 * Near real-time monitoring pipeline
 
 ---
-
-
-
-
 
