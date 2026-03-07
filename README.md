@@ -1,71 +1,60 @@
 # Minimum-Advertised-Price-Compliance-Automation-System
 
 
-## 🧭 Project Overview
+## Project Overview
 
-This project focuses on building an automated **MAP (Minimum Advertised Price) compliance monitoring system** that helps brands ensure their resellers do not advertise products below approved pricing thresholds.
+This project implements an automated **MAP (Minimum Advertised Price) compliance monitoring system** that tracks reseller pricing across marketplaces and enforces pricing policies.
 
-The solution continuously monitors marketplace prices, maps reseller identities across platforms, and triggers automated enforcement actions such as warning notifications and category suspension.
+The system monitors **150K+ product listings from 901 sellers across 5 marketplaces**, detects MAP/LPP violations, resolves reseller identities, and automatically triggers enforcement actions such as warning notifications and category suspension.
 
----
-
-## 🎯 Objective
-
-To design and implement a scalable system that:
-
-* Tracks reseller advertised prices across marketplaces
-* Detects violations of MAP/LPP policies
-* Automatically issues warning letters
-* Enforces category suspension for repeated violations
-* Maintains brand price integrity and fair competition
+The goal is to help brands maintain **price integrity, prevent price erosion, and enforce fair reseller competition**.
 
 ---
 
-## 🚨 Business Problem
+# Business Problem
 
-Brands rely on MAP policies to protect product value and prevent price wars among resellers. However, manual monitoring is:
+Brands enforce **Minimum Advertised Price (MAP)** policies to protect product value.
+However, monitoring reseller compliance across multiple marketplaces is difficult due to:
 
-* ❌ Time-consuming
-* ❌ Error-prone
-* ❌ Difficult across multiple marketplaces
-* ❌ Complicated when sellers use different store names
+* Large number of product listings
+* Sellers using **different storefront aliases**
+* Constant price updates
+* Manual monitoring limitations
 
-Non-compliance leads to:
+Without automated monitoring, brands risk:
 
 * Market price erosion
 * Brand devaluation
 * Unfair reseller competition
-* Loss of customer trust
-
-👉 The client needed an **automated, production-style monitoring system**.
 
 ---
 
-## 🧩 Key Concepts
+# Key Concepts
 
-### 🔹 Minimum Advertised Price (MAP)
+### Minimum Advertised Price (MAP)
 
-The minimum price set by the brand that resellers are allowed to advertise.
+The minimum price that resellers are allowed to advertise for a product.
 
-### 🔹 Lowest Possible Price (LPP)
+### Lowest Possible Price (LPP)
 
 The lowest acceptable selling price derived from MAP.
-Violations are typically flagged when:
 
-> **Seller Advertised Price (SAP) < LPP**
+Violation rule:
 
-### 🔹 Seller Advertised Price (SAP)
+```
+Seller Advertised Price (SAP) < LPP
+```
 
-The price at which a reseller lists the product on a marketplace.
+### Seller Advertised Price (SAP)
 
-### 🔹 Reseller Mapping
+The price at which a reseller lists a product on a marketplace.
 
-Resellers may operate under different storefront names.
-This project uses **fuzzy matching and lookup techniques** to map aliases to a single homologated seller.
+### Seller Identity Resolution
 
-### 🔹 Product Line
+Resellers may operate under multiple storefront names across marketplaces.
+The system uses **fuzzy matching and lookup mapping** to consolidate aliases into a single seller identity.
 
-Hierarchical grouping of products into categories and subcategories for enforcement actions.
+
 
 ---
 
