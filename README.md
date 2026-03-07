@@ -94,6 +94,58 @@ Enforcement Engine
 PDF Warning Generator
 ```
 
+## SQL Violation Queries
+
+Violation Recording Query**
+
+When a MAP violation is detected, the system records the violation in a dedicated violation tracking table. This enables enforcement rules, audit tracking, and compliance monitoring.
+
+```
+INSERT INTO violation_table (
+    sku,
+    seller_name,
+    homologated_sellers,
+    region,
+    advertised_price,
+    LLP,
+    promotional_price,
+    season,
+    violation_flag,
+    violation_date,
+    marketplace
+)
+SELECT
+    sku,
+    seller_name,
+    homologated_sellers,
+    region,
+    advertised_price,
+    LLP,
+    promotional_price,
+    season,
+    violation_flag,
+    violation_date,
+    marketplace
+FROM price_monitoring
+WHERE violation_flag = 'VIOLATION';
+```
+ 
+**Repeat MAP Violations by Seller, SKU, and Category**
+
+Explanation: Identifies seller–product combinations where MAP violations occurred more than three times, helping detect repeat offenders and high-risk SKUs.
+
+```
+SELECT
+    seller_name,
+    sku,
+    category,
+    COUNT(*) AS violation_count
+FROM violation_table
+GROUP BY seller_name, sku, category
+HAVING COUNT(*) > 3
+ORDER BY violation_count DESC;
+```
+
 ---
 
 # Workflow Components
