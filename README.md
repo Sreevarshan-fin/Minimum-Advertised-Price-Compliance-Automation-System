@@ -59,7 +59,7 @@ The system uses **fuzzy matching and lookup mapping** to consolidate aliases int
 ---
 
 
-##  ⚙️ Project Architecture
+##  Project Architecture
 
 
 ![Credit Risk Flow](https://raw.githubusercontent.com/Sreevarshan-fin/Sreevarshan-fin/main/assets/mapproject.svg)
