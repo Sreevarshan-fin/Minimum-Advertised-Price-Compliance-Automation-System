@@ -69,6 +69,7 @@ The system uses **fuzzy matching and lookup mapping** to consolidate aliases int
 
 ## ⚙️ System Workflow
 
+```
 CSV / Excel
    ↓
 Data Ingestion
@@ -89,7 +90,7 @@ Enforcement Engine
 (rule-based action)
    ↓
 PDF Warning Generator
-
+```
 
 ### 1️. Price Monitoring
 
