@@ -3,9 +3,9 @@
 
 ## Project Overview
 
-This project implements an **automated MAP compliance monitoring system** that tracks reseller pricing across multiple marketplaces and enforces pricing policies.
+This project implements an automated MAP compliance monitoring system to track reseller pricing across multiple marketplaces and enforce pricing policies.
 
-The system processes **150K+ product listings from 901 sellers across 5 marketplaces**, detects **MAP/LPP violations**, resolves reseller identities, and triggers enforcement actions such as **warning notifications and category suspension**.
+The system processes 150K+ product listings from 901 sellers across 5 marketplaces, detects MAP/LPP violations, resolves reseller identities, and triggers enforcement actions such as warning notifications and category suspension..
 
 
 ---
@@ -14,18 +14,18 @@ The system processes **150K+ product listings from 901 sellers across 5 marketpl
 
 Brands enforce **Minimum Advertised Price (MAP)** policies to protect product value and maintain consistent pricing across resellers.
 
-However, monitoring reseller compliance across multiple marketplaces is challenging due to:
+However, monitoring reseller compliance across multiple marketplaces is challenging due to the following factors:
 
-* Large volume of product listings
-* Sellers operating under multiple storefront aliases
-* Frequent price updates
-* Manual monitoring limitations
+* A Large volume of product listings.
+* Sellers operating under multiple storefront aliases.
+* Frequent price updates.
+* Manual monitoring limitations.
 
 Without automated monitoring, brands risk:
 
-* Market price erosion
-* Brand devaluation
-* Unfair reseller competition
+* Market price erosion.
+* Brand devaluation.
+* Unfair reseller competition.
 
 ---
 
@@ -33,7 +33,7 @@ Without automated monitoring, brands risk:
 
 ### Minimum Advertised Price (MAP)
 
-The minimum price that resellers are allowed to advertise for a product.
+The minimum price at which resellers are allowed to advertise a product.
 
 ### Lowest Possible Price (LPP)
 
@@ -45,9 +45,7 @@ Violation rule:
 Seller Advertised Price (SAP) < LPP
 ```
 
-### Seller Advertised Price (SAP)
-
-The price at which a reseller lists a product on a marketplace.
+**Seller Advertised Price (SAP):** The price at which a reseller lists a product on a marketplace.
 
 ### Seller Identity Resolution
 
@@ -68,13 +66,13 @@ The system uses **fuzzy matching and lookup mapping** to consolidate aliases int
 
 The MAP compliance system automates pricing monitoring, violation detection, and enforcement across marketplaces.
 
-### System Workflow
+### System Workflow:
 
 ```
 CSV / Excel
    ↓
 Data Ingestion
-(scan, deduplicate)
+(scanning, deduplication)
    ↓
 Seller Identity Resolution
 (fuzzy alias mapping)
@@ -148,15 +146,14 @@ ORDER BY violation_count DESC;
 ---
 ## Pipeline & Automation
 
-* Designed an **Airflow DAG** to define task dependencies:
+* Designed an Airflow DAG to define task dependencies, including::
 
   * Data ingestion
   * Price monitoring
   * Violation detection
   * Letter generation
 
-* Implemented execution using **Windows Task Scheduler**
-  → Runs every **12 minutes**
+* Implemented execution using Windows Task Scheduler, running every 12 minutes.
 
 * Handles:
 
@@ -207,7 +204,7 @@ ORDER BY violation_count DESC;
 
 ### System Response
 
-1. System detects **SAP ($90) < LPP ($95)**
+1. The system detects that SAP ($90) is less than LPP ($95).
 2. Fuzzy matching maps **Smart Place Store → 7-Eleven**
 3. Violation recorded in compliance database
 4. **Warning notification automatically generated**
@@ -218,16 +215,16 @@ ORDER BY violation_count DESC;
 # Business Impact
 
 * Monitored **150K+ product listings** from **901 sellers across 5 marketplaces**
-* Enabled scalable **cross-marketplace MAP compliance monitoring**
+* Enabled scalable MAP compliance monitoring across multiple marketplaces.
 * Reduced duplicate seller identities by **~25%** through seller entity resolution
 * Decreased manual compliance review time by **~40%** through automated violation detection
-* Improved pricing policy enforcement with **full audit traceability**
+* Improved pricing policy enforcement with **full audit traceability.**
 
 ---
 
 # Tech Stack
 
-* **Python** – Data processing & automation
+* **Python** – Data processing and automation
 * **MySQL** – Data storage & compliance logic
 * **Pandas / NumPy** – Data transformation
 * **ReportLab** – PDF generation
