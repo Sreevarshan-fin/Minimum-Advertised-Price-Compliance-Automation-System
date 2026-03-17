@@ -150,7 +150,25 @@ ORDER BY violation_count DESC;
 ```
 
 ---
+## Pipeline & Automation
 
+* Designed an **Airflow DAG** to define task dependencies:
+
+  * Data ingestion
+  * Price monitoring
+  * Violation detection
+  * Letter generation
+
+* Implemented execution using **Windows Task Scheduler**
+  → Runs every **12 minutes**
+
+* Handles:
+
+  * New file detection
+  * Violation processing
+  * PDF generation (ReportLab)
+  * MySQL history tracking (prevents duplicates)
+    
 # Workflow Components
 
 ### 1. Price Monitoring
