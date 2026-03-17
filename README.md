@@ -175,7 +175,7 @@ ORDER BY violation_count DESC;
 
 ### 2. Seller Identity Mapping
 
-* Apply **fuzzy/partial matching**
+* Unified multiple seller name variations into a single identity  
 * Map seller aliases to master reseller identity
 * Consolidate violations across marketplaces
 
