@@ -7,6 +7,8 @@ This project implements an **automated MAP (Minimum Advertised Price) compliance
 
 The system monitors **150K+ product listings from 901 sellers across 5 marketplaces**, detects **MAP/LPP violations**, resolves reseller identities, and automatically triggers enforcement actions such as **warning notifications and category suspension**.
 
+I automated the end-to-end pipeline using **Windows Task Scheduler**, enabling the system to run every 12 minutes. The pipeline dynamically checks for new files, processes violations, generates PDF warning letters, and updates a MySQL history table to prevent duplicate processing.
+
 The goal is to help brands **maintain price integrity, prevent price erosion, and ensure fair reseller competition**.
 
 ---
