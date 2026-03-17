@@ -5,11 +5,12 @@
 
 This project implements an **automated MAP (Minimum Advertised Price) compliance monitoring system** that tracks reseller pricing across multiple marketplaces and enforces pricing policies.
 
-The system monitors **150K+ product listings from 901 sellers across 5 marketplaces**, detects **MAP/LPP violations**, resolves reseller identities, and automatically triggers enforcement actions such as **warning notifications and category suspension**.
+The system processes **150K+ product listings from 901 sellers across 5 marketplaces**, detects **MAP/LPP violations**, resolves reseller identities, and triggers enforcement actions such as **warning notifications and category suspension**.
 
-I automated the end-to-end pipeline using **Windows Task Scheduler**, enabling the system to run every 12 minutes. The pipeline dynamically checks for new files, processes violations, generates PDF warning letters, and updates a MySQL history table to prevent duplicate processing.
+An **Airflow DAG** was designed to orchestrate the pipeline, defining task dependencies for data ingestion, price monitoring, violation detection, and automated letter generation. For reliable execution in a local environment, **Windows Task Scheduler** was used to run the pipeline every 12 minutes. The system dynamically processes new data, generates PDF violation letters, and maintains a MySQL history table to prevent duplicate processing.
 
-The goal is to help brands **maintain price integrity, prevent price erosion, and ensure fair reseller competition**.
+The objective is to help brands **maintain price integrity, prevent price erosion, and ensure fair reseller competition**.
+
 
 ---
 
