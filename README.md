@@ -230,7 +230,6 @@ ORDER BY violation_count DESC;
 * **Python** – Data processing & automation
 * **MySQL** – Data storage & compliance logic
 * **Pandas / NumPy** – Data transformation
-* **Fuzzy Matching** – Seller identity resolution
 * **ReportLab** – PDF generation
 * **Airflow (Design)** – Pipeline orchestration
 * **Task Scheduler** – Automation execution
