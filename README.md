@@ -223,7 +223,7 @@ ORDER BY violation_count DESC;
 
 ---
 
-## 👉 Tech Stack
+## 🔹 Tech Stack
 
 * **Python** – Data processing and automation
 * **MySQL** – Data storage & compliance logic
@@ -233,8 +233,8 @@ ORDER BY violation_count DESC;
 * **Task Scheduler** – Automation execution
 
 ---
-
-## 👉 Future Enhancements
+  
+## 🔹 Future Enhancements
 
 * Real-time marketplace price scraping
 * ML-based seller identity resolution
