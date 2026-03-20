@@ -93,7 +93,7 @@ PDF Warning Generator
 
 ## 🔹 SQL Violation Queries
 
-**Violation Recording Query**
+👉 **Violation Recording Query**
 
 When a MAP violation is detected, the system records the violation in a dedicated violation tracking table. This enables enforcement rules, audit tracking, and compliance monitoring.
 
@@ -127,7 +127,7 @@ FROM price_monitoring
 WHERE violation_flag = 'VIOLATION';
 ```
  
-**Repeat MAP Violations by Seller, SKU, and Category**
+👉 **Repeat MAP Violations by Seller, SKU, and Category**
 
 Explanation: Identifies seller–product combinations where MAP violations occurred more than three times, helping detect repeat offenders and high-risk SKUs.
 
@@ -165,25 +165,25 @@ ORDER BY violation_count DESC;
     
 ## Workflow Components
 
-**1. Price Monitoring**
+ 👉 **1. Price Monitoring**
 
 * Ingest marketplace price listings
 * Compare **SAP vs LPP** thresholds
 * Detect potential MAP violations
 
-**2. Seller Identity Mapping**
+👉 **2. Seller Identity Mapping**
 
 * Unified multiple seller name variations into a single identity  
 * Map seller aliases to master reseller identity
 * Consolidate violations across marketplaces
 
-**3. Automated Enforcement**
+👉 **3. Automated Enforcement**
 
 * First violation → Warning notification
 * Repeated violations → Category suspension
 * Maintain violation history for audit tracking
 
-**4. Reporting & Insights**
+👉 **4. Reporting & Insights**
 
 * Violation dashboards
 * Seller compliance tracking
