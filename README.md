@@ -1,7 +1,7 @@
 
 # Minimum Advertised Price (MAP) Compliance Automation System
 
-## Project Overview
+## 🔹 Project Overview
 
 This project implements an automated MAP compliance monitoring system to track reseller pricing across multiple marketplaces and enforce pricing policies.
 
@@ -10,7 +10,7 @@ The system processes 150K+ product listings from 901 sellers across 5 marketplac
 
 ---
 
-# Business Problem
+## 🔹 Business Problem
 
 Brands enforce **Minimum Advertised Price (MAP)** policies to protect product value and maintain consistent pricing across resellers.
 
@@ -29,13 +29,13 @@ Without automated monitoring, brands risk:
 
 ---
 
-# Key Concepts
+## 🔹 Key Concepts
 
-### Minimum Advertised Price (MAP)
+👉 Minimum Advertised Price (MAP)
 
 The minimum price at which resellers are allowed to advertise a product.
 
-### Lowest Possible Price (LPP)
+👉 Lowest Possible Price (LPP)
 
 The lowest acceptable selling price derived from MAP.
 
@@ -47,14 +47,14 @@ Seller Advertised Price (SAP) < LPP
 
 **Seller Advertised Price (SAP):** The price at which a reseller lists a product on a marketplace.
 
-### Seller Identity Resolution
+👉 Seller Identity Resolution
 
 Resellers may operate under multiple storefront names across marketplaces.
 The system uses **fuzzy matching and lookup mapping** to consolidate aliases into a single seller identity.
 
 ---
 
-##  Project Architecture
+##  🔹 Project Architecture
 
 
 ![Credit Risk Flow](https://raw.githubusercontent.com/Sreevarshan-fin/Sreevarshan-fin/main/assets/mapproject.svg)
@@ -66,7 +66,7 @@ The system uses **fuzzy matching and lookup mapping** to consolidate aliases int
 
 The MAP compliance system automates pricing monitoring, violation detection, and enforcement across marketplaces.
 
-### System Workflow:
+👉 System Workflow:
 
 ```
 CSV / Excel
@@ -91,9 +91,9 @@ Enforcement Engine
 PDF Warning Generator
 ```
 
-## SQL Violation Queries
+## 🔹 SQL Violation Queries
 
-Violation Recording Query**
+**Violation Recording Query**
 
 When a MAP violation is detected, the system records the violation in a dedicated violation tracking table. This enables enforcement rules, audit tracking, and compliance monitoring.
 
@@ -144,7 +144,8 @@ ORDER BY violation_count DESC;
 ```
 
 ---
-## Pipeline & Automation
+
+## 🔹 Pipeline & Automation
 
 * Designed an Airflow DAG to define task dependencies, including::
 
@@ -162,27 +163,27 @@ ORDER BY violation_count DESC;
   * PDF generation (ReportLab)
   * MySQL history tracking (prevents duplicates)
     
-# Workflow Components
+## Workflow Components
 
-### 1. Price Monitoring
+**1. Price Monitoring**
 
 * Ingest marketplace price listings
 * Compare **SAP vs LPP** thresholds
 * Detect potential MAP violations
 
-### 2. Seller Identity Mapping
+**2. Seller Identity Mapping**
 
 * Unified multiple seller name variations into a single identity  
 * Map seller aliases to master reseller identity
 * Consolidate violations across marketplaces
 
-### 3. Automated Enforcement
+**3. Automated Enforcement**
 
 * First violation → Warning notification
 * Repeated violations → Category suspension
 * Maintain violation history for audit tracking
 
-### 4. Reporting & Insights
+**4. Reporting & Insights**
 
 * Violation dashboards
 * Seller compliance tracking
@@ -190,7 +191,7 @@ ORDER BY violation_count DESC;
 
 ---
 
-# Example Scenario
+## 🔹Example Scenario
 
 **Reseller:** 7-Eleven
 **Alias:** Smart Place Store
@@ -202,7 +203,7 @@ ORDER BY violation_count DESC;
 | LPP              | $95   |
 | Advertised Price | $90   |
 
-### System Response
+**System Response**
 
 1. The system detects that SAP ($90) is less than LPP ($95).
 2. Fuzzy matching maps **Smart Place Store → 7-Eleven**
@@ -212,7 +213,7 @@ ORDER BY violation_count DESC;
 
 ---
 
-# Business Impact
+## 👉 Business Impact
 
 * Monitored **150K+ product listings** from **901 sellers across 5 marketplaces**
 * Enabled scalable MAP compliance monitoring across multiple marketplaces.
@@ -222,7 +223,7 @@ ORDER BY violation_count DESC;
 
 ---
 
-# Tech Stack
+## 👉 Tech Stack
 
 * **Python** – Data processing and automation
 * **MySQL** – Data storage & compliance logic
@@ -233,7 +234,7 @@ ORDER BY violation_count DESC;
 
 ---
 
-# Future Enhancements
+## 👉 Future Enhancements
 
 * Real-time marketplace price scraping
 * ML-based seller identity resolution
