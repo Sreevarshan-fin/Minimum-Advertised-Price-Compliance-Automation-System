@@ -213,7 +213,7 @@ ORDER BY violation_count DESC;
 
 ---
 
-## 👉 Business Impact
+## 🔹 Business Impact
 
 * Monitored **150K+ product listings** from **901 sellers across 5 marketplaces**
 * Enabled scalable MAP compliance monitoring across multiple marketplaces.
