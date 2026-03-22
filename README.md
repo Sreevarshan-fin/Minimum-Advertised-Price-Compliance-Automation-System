@@ -368,6 +368,7 @@ WHERE violation_flag = 'VIOLATION';
 
 <details>
 <summary><b>Repeat offender detection</b></summary>
+   
 ```sql
 SELECT
     seller_name,
