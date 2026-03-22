@@ -347,6 +347,7 @@ PDF Warning Generator
 
 <details>
 <summary><b>Violation recording query</b></summary>
+   
 ```sql
 INSERT INTO violation_table (
     sku, seller_name, homologated_sellers,
