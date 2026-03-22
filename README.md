@@ -389,6 +389,7 @@ ORDER BY violation_count DESC;
 
 <details>
 <summary><b>Airflow DAG — task dependencies</b></summary>
+   
 ```
 data_ingestion
       ↓
