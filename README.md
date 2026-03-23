@@ -1,6 +1,8 @@
 
 # MAP Compliance Automation System
 
+----
+
 ![Python](https://img.shields.io/badge/Python-3.11-black)
 ![MySQL](https://img.shields.io/badge/MySQL-black)
 ![Pandas](https://img.shields.io/badge/Pandas-black)
