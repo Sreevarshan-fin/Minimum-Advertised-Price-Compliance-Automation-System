@@ -1,5 +1,5 @@
 
-# MAP Compliance Automation System
+# Minimum Advertised Price Compliance Automation System
 
 ----
 
