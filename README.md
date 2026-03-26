@@ -70,40 +70,17 @@ PDF Warning Generator
 
 ## 🔹 How It Works (Execution)
 
-The system operates as a fully automated workflow:
+The system runs as an automated workflow:
 
-### 1. Data Ingestion
-- Input files (CSV/Excel) are periodically ingested into the system
+- **Ingestion:** CSV/Excel files are periodically loaded  
+- **Processing:** Data is cleaned and deduplicated using Python  
+- **Storage:** Data is stored in MySQL (sellers, products, pricing)  
+- **Detection:** SQL identifies violations (**SAP < LPP**)  
+- **Tracking:** Violations are logged for audit and monitoring  
+- **Enforcement:** Automated PDF warnings and reports generated  
+- **Orchestration:** Apache Airflow manages scheduling and dependencies  
 
-### 2. Data Processing
-- Data cleaning and deduplication are performed using Python to ensure consistency and accuracy
-
-### 3. Data Storage
-- Processed data is stored in MySQL tables, including:
-  - Seller data  
-  - Product listings  
-  - Price monitoring records  
-
-### 4. Violation Detection
-- SQL queries identify violations where:
-  - **SAP (Seller Advertised Price) < LPP (Lowest Permitted Price)**
-
-### 5. Violation Tracking
-- Detected violations are stored in a dedicated **violation table**
-- Enables audit trail and repeat offender tracking
-
-### 6. Enforcement & Reporting
-- Rule-based actions are triggered:
-  - Warning letters are generated automatically  
-  - Reports are created using ReportLab  
-
-### 7. Workflow Orchestration
-- Apache Airflow manages task dependencies and scheduling
-- Ensures reliable and automated pipeline execution
-
-
-👉 **Execution Frequency:** Every 12 minutes  
-👉 Enables **near real-time price monitoring and enforcement**
+👉 Runs every **12 minutes** for near real-time monitoring
 
 ---------------
 
