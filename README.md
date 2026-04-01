@@ -11,6 +11,10 @@
 
 ----
 
+![workflow](assets/MAP_workflow.jpg)
+
+---
+
 ## 🔹 Overview
 
 An end-to-end automated MAP compliance monitoring system that processes **150K+ product listings** from **901 sellers across 5 marketplaces**, detects pricing violations, resolves seller identities, and triggers enforcement actions — replacing fragmented manual tracking with consistent, near real-time surveillance.
