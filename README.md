@@ -1,16 +1,13 @@
+<h1 align="center">MAP Compliance Automation System</h1>
 
-# Minimum Advertised Price Compliance Automation System
+<p align="center"><b>Automated Price Monitoring & Violation Detection Across Multi-Marketplaces</b></p>
 
-----
-
-![Python](https://img.shields.io/badge/Python-3.11-black)
-![MySQL](https://img.shields.io/badge/MySQL-black)
-![Pandas](https://img.shields.io/badge/Pandas-black)
-![Airflow](https://img.shields.io/badge/Apache_Airflow-black)
-![ReportLab](https://img.shields.io/badge/ReportLab-black)
-![Task Scheduler](https://img.shields.io/badge/Task_Scheduler-black)
-
----
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Apache_Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white"/>
+  <img src="https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=postgresql&logoColor=white"/>
+</p>
 
 ## 🔹 Overview
 
