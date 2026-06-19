@@ -25,47 +25,6 @@ An end-to-end automated MAP compliance monitoring system that processes **150K+ 
 
 Brands enforce **Minimum Advertised Price (MAP)** policies to protect **brand value** and maintain **pricing consistency** across resellers. However, monitoring compliance across **5 online marketplaces** is challenging due to **frequent price changes**, **seller aliases**, **fragmented data sources**, and the lack of a **centralized audit trail**. These challenges lead to **missed violations**, **inconsistent enforcement**, **price erosion**, and potential **revenue loss**. The objective was to build an **automated MAP compliance system** that could **detect violations**, **identify repeat offenders**, and provide a **unified compliance dashboard** for efficient monitoring and enforcement.
 
-
----
-
-## 🔹 System Architecture
-
-
-**Pipeline flow:**
-```
-CSV / Excel Input
-      ↓
-Data Ingestion — scanning, deduplication
-      ↓
-Seller Identity Resolution — fuzzy alias mapping
-      ↓
-Compliance Database (MySQL) — products, sellers, listings
-      ↓
-MAP Compliance Engine — SAP vs LPP detection
-      ↓
-Violation Table
-      ↓
-Enforcement Engine — rule-based actions
-      ↓
-PDF Warning Generator
-```
-
----
-
-## 🔹 How It Works (Execution)
-
-The system runs as an automated workflow:
-
-- **Ingestion:** CSV/Excel files are periodically loaded  
-- **Processing:** Data is cleaned and deduplicated using Python  
-- **Storage:** Data is stored in MySQL (sellers, products, pricing)  
-- **Detection:** SQL identifies violations (**SAP < LPP**)  
-- **Tracking:** Violations are logged for audit and monitoring  
-- **Enforcement:** Automated PDF warnings and reports generated  
-- **Orchestration:** Apache Airflow manages scheduling and dependencies  
-
-👉 Runs every **12 minutes** for near real-time monitoring
-
 ---------------
 
 
@@ -80,8 +39,6 @@ The system runs as an automated workflow:
 → Replaced fragmented manual reviews with **near real-time violation detection**, **seller tracking**, and **automated compliance reporting**.
 
 → Estimated a **30% reduction in manual compliance review effort** by automating monitoring, tracking, and reporting workflows.
-
-
 
 ---
 
@@ -153,37 +110,48 @@ ORDER BY violation_count DESC;
 
 ---
 
-## 🔹 Pipeline & Automation
+## 🔹 System Architecture
 
-<details>
-<summary><b>Airflow DAG — task dependencies</b></summary>
-   
+```text
+CSV / Excel Files
+        ↓
+Data Ingestion & Deduplication (Python)
+        ↓
+Seller Identity Resolution (Fuzzy Matching)
+        ↓
+MySQL Compliance Database
+        ↓
+MAP Compliance Engine (SAP < LPP)
+        ↓
+Violation Detection & Audit Logging
+        ↓
+Enforcement Engine
+        ↓
+PDF Warning Notifications
 ```
-data_ingestion
-      ↓
-price_monitoring
-      ↓
-violation_detection
-      ↓
-letter_generation
+
+### Execution Workflow
+
+* Ingests pricing data from CSV/Excel sources.
+* Cleans, deduplicates, and standardizes seller information.
+* Resolves seller aliases using fuzzy matching.
+* Stores products, sellers, listings, and violations in MySQL.
+* Detects MAP violations using the rule **SAP < LPP**.
+* Logs violations for compliance tracking and auditing.
+* Generates automated PDF warning notifications.
+* Scheduled and orchestrated using **Apache Airflow**, running every **12 minutes**.
+
+### Enforcement Logic
+
+| Violation Count     | Action                   |
+| ------------------- | ------------------------ |
+| First Violation     | PDF warning notification |
+| Repeated Violations | Category suspension      |
+| All Violations      | Logged to audit trail    |
+
+```
 ```
 
-- Designed in **Apache Airflow** for dependency management
-- Executed via **Windows Task Scheduler** every 12 minutes
-- Handles new file detection, violation processing, PDF generation, MySQL deduplication
-
-</details>
-
-<details>
-<summary><b>Enforcement logic</b></summary>
-
-| Violation Count | Action |
-|---|---|
-| First violation | PDF warning notification sent |
-| Repeated violations | Category suspension triggered |
-| All violations | Logged to audit trail |
-
-</details>
 
 ---
 
