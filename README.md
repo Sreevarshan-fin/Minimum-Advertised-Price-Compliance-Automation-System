@@ -36,7 +36,7 @@ Brands enforce **Minimum Advertised Price (MAP)** policies to protect **brand va
 
 ## 🔹 Business Impact
 
-→ Monitored **1,500+ product listings** and tracked **150K+ pricing records** across **5 marketplaces** through an automated MAP compliance pipeline.
+→ Monitored 1,500+ product listings and processed 150K+ pricing records across 5 marketplaces through an automated MAP compliance pipeline.
 
 → Detected and logged **10,000+ MAP violations** using rule-based price validation and automated compliance monitoring.
 
@@ -200,4 +200,15 @@ ORDER BY violation_count DESC;
 - ML-based seller identity resolution
 - Automated email notification system
 - Seller risk scoring model
-- Near real-time monitoring pipeline
+- Real-time event-driven monitoring pipeline
+
+---
+
+## 🔹 Key Takeaways
+
+- Built an end-to-end MAP compliance monitoring system using Python, SQL, MySQL, and Apache Airflow.
+- Automated violation detection, seller identity resolution, and enforcement workflows.
+- Processed 150K+ pricing records across 5 marketplaces with near real-time monitoring.
+- Reduced manual compliance effort and improved auditability through centralized tracking and reporting.
+
+--------
