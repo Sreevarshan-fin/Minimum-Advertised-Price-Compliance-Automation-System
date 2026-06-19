@@ -17,12 +17,13 @@
 
 ## 🔹 Overview
 
-An end-to-end automated MAP compliance monitoring system that processes **150K+ product listings** from **901 sellers across 5 marketplaces**, detects pricing violations, resolves seller identities, and triggers enforcement actions — replacing fragmented manual tracking with consistent, near real-time surveillance.
+An end-to-end automated MAP compliance monitoring system that monitors **1,500+ product listings**, processes **150K+ pricing records** from **901 sellers across 5 marketplaces**, detects pricing violations, resolves seller identities, and triggers automated enforcement actions.
 
 ---
+
 ## 🔹 Tech Stack
 
-Python • SQL • Pandas • NumPy • MySQL • Apache Airflow • ReportLab 
+**Python, SQL, Pandas, NumPy, MySQL, Apache Airflow, ReportLab**
 
 ---
 
@@ -189,7 +190,7 @@ ORDER BY violation_count DESC;
 
 - **Seller alias explosion** — same reseller operating under 10+ storefronts required fuzzy matching + manual lookup tables to consolidate accurately
 - **Idempotency** — pipeline runs every 12 minutes, so duplicate violation inserts had to be prevented via MySQL deduplication logic
-- **Scale** — 150K+ listings per run required efficient batch processing to avoid memory issues
+- **Scale** — processing **150K+ historical pricing records** and monitoring **1,500+ active listings** required efficient batch processing and database optimization.
 
 ---
 
