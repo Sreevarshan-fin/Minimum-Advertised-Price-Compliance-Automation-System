@@ -20,6 +20,11 @@
 An end-to-end automated MAP compliance monitoring system that processes **150K+ product listings** from **901 sellers across 5 marketplaces**, detects pricing violations, resolves seller identities, and triggers enforcement actions — replacing fragmented manual tracking with consistent, near real-time surveillance.
 
 ---
+## 🔹 Tech Stack
+
+Python • SQL • Pandas • NumPy • MySQL • Apache Airflow • ReportLab 
+
+---
 
 ## 🔹 Business Problem
 
@@ -36,7 +41,7 @@ Brands enforce **Minimum Advertised Price (MAP)** policies to protect **brand va
 
 → Consolidated **901 seller aliases into 100 unique parent sellers** using fuzzy matching, improving repeat-offender identification and enforcement accuracy.
 
-→ Replaced fragmented manual reviews with **near real-time violation detection**, **seller tracking**, and **automated compliance reporting**.
+→ Enabled near real-time monitoring by **replacing manual reviews** with automated compliance scans every **12 minutes**, improving violation visibility, audit readiness, and enforcement responsiveness.
 
 → Estimated a **30% reduction in manual compliance review effort** by automating monitoring, tracking, and reporting workflows.
 
@@ -65,48 +70,6 @@ Brands enforce **Minimum Advertised Price (MAP)** policies to protect **brand va
 4. Generates an automated PDF warning notification.
 5. Tracks repeat violations and triggers enforcement actions when thresholds are exceeded.
 
-
----
-
-## 🔹 SQL Queries
-
-<details>
-<summary><b>Violation recording query</b></summary>
-   
-```sql
-INSERT INTO violation_table (
-    sku, seller_name, homologated_sellers,
-    region, advertised_price, LLP,
-    promotional_price, season,
-    violation_flag, violation_date, marketplace
-)
-SELECT
-    sku, seller_name, homologated_sellers,
-    region, advertised_price, LLP,
-    promotional_price, season,
-    violation_flag, violation_date, marketplace
-FROM price_monitoring
-WHERE violation_flag = 'VIOLATION';
-```
-
-</details>
-
-<details>
-<summary><b>Repeat offender detection</b></summary>
-   
-```sql
-SELECT
-    seller_name,
-    sku,
-    category,
-    COUNT(*) AS violation_count
-FROM violation_table
-GROUP BY seller_name, sku, category
-HAVING COUNT(*) > 3
-ORDER BY violation_count DESC;
-```
-
-</details>
 
 ---
 
@@ -151,6 +114,49 @@ PDF Warning Notifications
 
 
 ---
+
+
+## 🔹 SQL Queries
+
+<details>
+<summary><b>Violation recording query</b></summary>
+   
+```sql
+INSERT INTO violation_table (
+    sku, seller_name, homologated_sellers,
+    region, advertised_price, LLP,
+    promotional_price, season,
+    violation_flag, violation_date, marketplace
+)
+SELECT
+    sku, seller_name, homologated_sellers,
+    region, advertised_price, LLP,
+    promotional_price, season,
+    violation_flag, violation_date, marketplace
+FROM price_monitoring
+WHERE violation_flag = 'VIOLATION';
+```
+
+</details>
+
+<details>
+<summary><b>Repeat offender detection</b></summary>
+   
+```sql
+SELECT
+    seller_name,
+    sku,
+    category,
+    COUNT(*) AS violation_count
+FROM violation_table
+GROUP BY seller_name, sku, category
+HAVING COUNT(*) > 3
+ORDER BY violation_count DESC;
+```
+
+</details>
+
+------
 
 ## 🔹 Project Structure
 
