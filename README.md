@@ -68,13 +68,19 @@ The system runs as an automated workflow:
 
 ---------------
 
+
 ## 🔹 Business Impact
 
-→ Continuously monitored **1,500+ product listings** and tracked **150K+ pricing records** from **901 sellers** across **5 marketplaces** through an automated MAP compliance pipeline running every **12 minutes**.
+→ Monitored **1,500+ product listings** and tracked **150K+ pricing records** across **5 marketplaces** through an automated MAP compliance pipeline.
 
-→ Replaced fragmented manual reviews with **near real-time violation detection**, **seller tracking**, and **automated compliance reporting**, improving compliance visibility and audit readiness.
+→ Detected and logged **10,000+ MAP violations** using rule-based price validation and automated compliance monitoring.
 
-→ Estimated a **30% reduction in manual compliance review effort** by automating repetitive monitoring, tracking, and reporting activities, enabling compliance teams to focus on enforcement actions and high-priority investigations.
+→ Consolidated **901 seller aliases into 100 unique parent sellers** using fuzzy matching, improving repeat-offender identification and enforcement accuracy.
+
+→ Replaced fragmented manual reviews with **near real-time violation detection**, **seller tracking**, and **automated compliance reporting**.
+
+→ Estimated a **30% reduction in manual compliance review effort** by automating monitoring, tracking, and reporting workflows.
+
 
 
 ---
