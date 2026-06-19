@@ -149,12 +149,12 @@ PDF Warning Notifications
 | Repeated Violations | Category suspension      |
 | All Violations      | Logged to audit trail    |
 
-```
+
 ---
 
 ## 🔹 Project Structure
-```
-map-compliance/
+
+```map-compliance/
 │
 ├── pipeline/
 │   ├── ingestion.py           # Data ingestion & deduplication
