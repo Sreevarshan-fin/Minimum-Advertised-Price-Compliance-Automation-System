@@ -23,16 +23,8 @@ An end-to-end automated MAP compliance monitoring system that processes **150K+ 
 
 ## 🔹 Business Problem
 
-Brands enforce Minimum Advertised Price (MAP) policies to protect product value and maintain consistent pricing across resellers. Manual monitoring at scale fails due to:
+Brands enforce **Minimum Advertised Price (MAP)** policies to protect **brand value** and maintain **pricing consistency** across resellers. However, monitoring compliance across **1,400+ product listings** and **5 online marketplaces** is challenging due to **frequent price changes**, **seller aliases**, **fragmented data sources**, and the lack of a **centralized audit trail**. These challenges result in **missed violations**, **inconsistent enforcement**, **price erosion**, and potential **revenue loss**. The objective was to build an **automated MAP compliance system** that could **detect violations**, **identify repeat offenders**, and provide a **unified compliance dashboard** for monitoring and enforcement.
 
-| Challenge | Impact |
-|---|---|
-| 150K+ listings updated frequently | Manual review impossible |
-| Sellers operating under multiple aliases | Duplicate violations, missed offenders |
-| Multi-marketplace spread | No unified compliance view |
-| No audit trail | Enforcement decisions unverifiable |
-
-Without automation, brands risk **price erosion**, **brand devaluation**, and **unfair reseller competition**.
 
 ---
 
