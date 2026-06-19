@@ -23,19 +23,8 @@ An end-to-end automated MAP compliance monitoring system that processes **150K+ 
 
 ## 🔹 Business Problem
 
-Brands enforce **Minimum Advertised Price (MAP)** policies to protect **brand value** and maintain **pricing consistency** across resellers. However, monitoring compliance across **1,400+ product listings** and **5 online marketplaces** is challenging due to **frequent price changes**, **seller aliases**, **fragmented data sources**, and the lack of a **centralized audit trail**. These challenges result in **missed violations**, **inconsistent enforcement**, **price erosion**, and potential **revenue loss**. The objective was to build an **automated MAP compliance system** that could **detect violations**, **identify repeat offenders**, and provide a **unified compliance dashboard** for monitoring and enforcement.
+Brands enforce **Minimum Advertised Price (MAP)** policies to protect **brand value** and maintain **pricing consistency** across resellers. However, monitoring compliance across **5 online marketplaces** is challenging due to **frequent price changes**, **seller aliases**, **fragmented data sources**, and the lack of a **centralized audit trail**. These challenges lead to **missed violations**, **inconsistent enforcement**, **price erosion**, and potential **revenue loss**. The objective was to build an **automated MAP compliance system** that could **detect violations**, **identify repeat offenders**, and provide a **unified compliance dashboard** for efficient monitoring and enforcement.
 
-
----
-
-## 🔹 Key Concepts
-
-| Term | Definition |
-|---|---|
-| MAP | Minimum Advertised Price — the floor price resellers can advertise |
-| LPP | Lowest Possible Price — derived from MAP |
-| SAP | Seller Advertised Price — actual listed price |
-| Violation | SAP < LPP |
 
 ---
 
@@ -79,34 +68,40 @@ The system runs as an automated workflow:
 
 ---------------
 
-## 🔹 Results
+## 🔹 Business Impact
 
-| Metric | Value |
-|---|---|
-| Listings monitored | 150K+ |
-| Sellers tracked | 901 across 5 marketplaces |
-| Duplicate seller identities reduced | ~25% |
-| Manual compliance review time reduced | ~40% |
-| Monitoring frequency | Every 12 minutes |
+→ Continuously monitored **1,500+ product listings** and tracked **150K+ pricing records** from **901 sellers** across **5 marketplaces** through an automated MAP compliance pipeline running every **12 minutes**.
+
+→ Replaced fragmented manual reviews with **near real-time violation detection**, **seller tracking**, and **automated compliance reporting**, improving compliance visibility and audit readiness.
+
+→ Estimated a **30% reduction in manual compliance review effort** by automating repetitive monitoring, tracking, and reporting activities, enabling compliance teams to focus on enforcement actions and high-priority investigations.
+
 
 ---
 
-## 🔹 Real-World Example
+## 🔹 Key Concepts & Example
 
-**Reseller:** 7-Eleven · **Alias:** Smart Place Store · **SKU:** GT53XL
+| Term          | Definition                                        | Example     |
+| ------------- | ------------------------------------------------- | ----------- |
+| **MAP**       | Minimum Advertised Price set by the brand         | $100        |
+| **LPP**       | Lowest Possible Price derived from MAP            | $95         |
+| **SAP**       | Seller Advertised Price listed on the marketplace | $90         |
+| **Violation** | Occurs when **SAP < LPP**                         | $90 < $95 ✅ |
 
-| Metric | Value |
-|---|---|
-| MAP | $100 |
-| LPP | $95 |
-| Advertised Price | $90 |
+### Example Violation
 
-**System response:**
-1. Detects SAP ($90) < LPP ($95) → violation flagged
-2. Fuzzy matching maps `Smart Place Store` → `7-Eleven`
-3. Violation recorded in compliance database
-4. PDF warning notification auto-generated
-5. Repeated violations → category suspension triggered
+**Seller:** 7-Eleven
+**Alias:** Smart Place Store
+**SKU:** GT53XL
+
+**System Workflow:**
+
+1. Detects **SAP ($90) < LPP ($95)** → MAP violation flagged.
+2. Uses **fuzzy matching** to map **"Smart Place Store"** to **"7-Eleven"**.
+3. Records the violation in the compliance database.
+4. Generates an automated PDF warning notification.
+5. Tracks repeat violations and triggers enforcement actions when thresholds are exceeded.
+
 
 ---
 
