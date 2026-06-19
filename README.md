@@ -150,9 +150,6 @@ PDF Warning Notifications
 | All Violations      | Logged to audit trail    |
 
 ```
-```
-
-
 ---
 
 ## 🔹 Project Structure
