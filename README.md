@@ -1,4 +1,3 @@
-<img width="1141" height="825" alt="image" src="https://github.com/user-attachments/assets/b87c9a9c-f1fa-405e-ada0-1d55a88b4c63" /><h1 align="center">MAP Compliance Automation System</h1>
 
 <p align="center"><b>Automated Price Monitoring & Violation Detection Across Multi-Marketplaces</b></p>
 
