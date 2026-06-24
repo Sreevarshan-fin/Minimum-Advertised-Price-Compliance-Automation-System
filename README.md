@@ -1,4 +1,4 @@
-<h1 align="center">MAP Compliance Automation System</h1>
+<img width="1141" height="825" alt="image" src="https://github.com/user-attachments/assets/b87c9a9c-f1fa-405e-ada0-1d55a88b4c63" /><h1 align="center">MAP Compliance Automation System</h1>
 
 <p align="center"><b>Automated Price Monitoring & Violation Detection Across Multi-Marketplaces</b></p>
 
@@ -36,15 +36,15 @@ Brands enforce **Minimum Advertised Price (MAP)** policies to protect **brand va
 
 ## 🔹 Business Impact
 
-→ Monitored 1,500+ product listings and processed 150K+ pricing records across 5 marketplaces through an automated MAP compliance pipeline.
+👉 Monitored 1,500+ product listings and processed 150K+ pricing records across 5 marketplaces through an automated MAP compliance pipeline.
 
-→ Detected and logged **10,000+ MAP violations** using rule-based price validation and automated compliance monitoring.
+👉 Detected and logged **10,000+ MAP violations** using rule-based price validation and automated compliance monitoring.
 
-→ Consolidated **901 seller aliases into 100 unique parent sellers** using fuzzy matching, improving repeat-offender identification and enforcement accuracy.
+👉 Consolidated **901 seller aliases into 100 unique parent sellers** using fuzzy matching, improving repeat-offender identification and enforcement accuracy.
 
-→ Enabled near real-time monitoring by **replacing manual reviews** with automated compliance scans every **12 minutes**, improving violation visibility, audit readiness, and enforcement responsiveness.
+👉 Enabled near real-time monitoring by **replacing manual reviews** with automated compliance scans every **12 minutes**, improving violation visibility, audit readiness, and enforcement responsiveness.
 
-→ Estimated a **30% reduction in manual compliance review effort** by automating monitoring, tracking, and reporting workflows.
+👉 Estimated a **30% reduction in manual compliance review effort** by automating monitoring, tracking, and reporting workflows.
 
 ---
 
