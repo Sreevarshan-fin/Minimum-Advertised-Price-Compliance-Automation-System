@@ -1,4 +1,4 @@
-
+![title](assets/map_title.png)
 <p align="center"><b>Automated Price Monitoring & Violation Detection Across Multi-Marketplaces</b></p>
 
 <p align="center">
